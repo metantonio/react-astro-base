@@ -4,6 +4,7 @@
 import Test from '../components/LandingTest.jsx'
 import {Navbar2} from '../components/Navbar2/navbar2.jsx'
 import BaseLayout from '../layout/BaseLayout.astro';
+import ExampleReactComponent from '../components/Example/exampleReactComponent.tsx'
 
 //example of .env variables
 import website from '../configuration.website';
@@ -18,6 +19,46 @@ const someProps = {
 ---
 
 <BaseLayout>
-  <h1>Home Page</h1>
-  <p>Home page content.</p>
+	<html lang="en-GB">
+		<head>
+		  <title>RodneyLab Minimal Astro Example</title>
+		  <style>
+			:global(.react-container) {
+			  display: flex;
+			  flex-direction: column;
+			  background: hsl(
+				var(--colour-secondary-hue) var(--colour-secondary-saturation) var(--colour-secondary-luminance)
+			  );
+			  align-items: center;
+			  width: 100%;
+			  padding: var(--spacing-8) var(--spacing-0);
+			  color: hsl(
+				var(--colour-light-text-hue) var(--colour-light-text-saturation) var(--colour-light-text-luminance)
+			  );
+			}
+	  
+			:global(.react-container-alt) {
+			  background: hsl(
+				var(--colour-alternative-hue) var(--colour-alternative-saturation) var(--colour-alternative-luminance)
+			  );
+			}
+	  
+			:global(.react-button) {
+			  background: hsl(
+				var(--colour-alternative-hue) var(--colour-alternative-saturation) var(--colour-alternative-luminance)
+			  );
+			}
+	  
+			:global(.react-button-alt) {
+			  background: hsl(
+				var(--colour-secondary-hue) var(--colour-secondary-saturation) var(--colour-secondary-luminance)
+			  );
+			}
+		  </style>
+		</head>
+	  
+		<body>
+		<ExampleReactComponent />
+		</body>
+	  </html>
 </BaseLayout>
