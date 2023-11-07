@@ -1,10 +1,14 @@
 ---
 // Component Imports
 //import Counter from '../components/Counter';
-import Test from '../components/LandingTest.jsx'
+//import Test from '../components/LandingTest.jsx'
 import {Navbar2} from '../components/Navbar2/navbar2.jsx'
 import BaseLayout from '../layout/BaseLayout.astro';
 import ExampleReactComponent from '../components/Example/exampleReactComponent.tsx'
+import type { addCartItem, cartItems, isCartOpen } from '../components/cartStore.jsx';
+import Layout from '../layout/Layout.astro';
+import AddToCartForm from '../components/AddToCartForm';
+import FigurineDescription from '../components/FigurineDescription.astro';
 
 //example of .env variables
 import website from '../configuration.website';
